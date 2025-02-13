@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Literals</title>
+</head>
+<body>
+
+   
+
+    <script>
+        const name = "Sallie";
+        const surname = "May";
+        const textHello1 = "Hello" + " " + name + " " + surname;
+        console.log(textHello1);
+
+        const textHello2 = `Hello ${name} ${surname} `;
+        console.log(textHello2);
+
+        // ---------------------------------
+
+        // const html = `<div><h2><a href="./index.php">Home Page</a></h2><p>Lorem</p></div>`
+        /*
+        let html = ``;
+        html += `<div>`;
+        html += ` <h2><a href="./index.php">Home Page</a></h2>`;
+        html += ` <p>Lorem</p>`;
+        html += `</div>`;
+        */
+
+        const html = `
+        <div>
+        <h2><a href="./index.php">Home Page</h2>
+            <p>Lorem</p>
+    </div>
+    `;
+
+    </script>
+</body>
+</html>
