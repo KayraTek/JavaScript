@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1><em>Hello Dom</em></h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora cumque
+        voluptatum inventore porro corporis quisquam
+        eligendi quia quis, molestias laudantium dolore
+        facilis quasi nulla dignissimos, commodi aut eaque eum!</p>
+
+    <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+
+    <script>
+        const h1Element = document.querySelector("h1");
+        console.log(h1Element);
+        console.log(h1Element.innerText);
+        console.log(h1Element.innerHTML);
+
+        h1Element.innerText = "<u>Merhaba Dünya</u>"
+        h1Element.innerHTML = "<u>Merhaba Dünya</u>"
+
+        const domHome = document.querySelector(".menu li ");
+        console.log(domHome);
+        const domContact = document.querySelector(".menu li:last-child");
+        console.log(domContact);
+
+        domContact.innerText = "Contact Us";   
+        
+        domContact.innerHTML = `<a href = "https://www.google.com"> Contact Us</a>`;
+      
+    </script>
+</body>
+
+</html>
