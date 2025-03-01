@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+
+<body>
+
+
+    <h1 id="name"></h1>
+    <h3 id="age"></h3>
+    <h3 id="salary"></h3>
+
+    <script>
+        const user = {
+            name: "John Doe",
+            age: 30,
+            departmant: {
+                name: "Accounting",
+                code: "AC",
+            }
+
+        }
+
+        const elName = document.querySelector('#name');
+        elName.innerText = user.name;
+
+
+        const elSalary = document.querySelector('#salary');
+        elSalary.innerText = user?.departmant?.name; // belirtilen uzantıyı bulamasa bile kodu çalıştırmaya devam et anlamı katıyor.
+        
+        const elAge = document.querySelector("#age");
+        elAge.innerText = user.age;
+
+    </script>
+</body>
+
+</html>
