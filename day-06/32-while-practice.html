@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Practice</title>
+</head>
+<body>
+    <input type="number" id="txtNumber">
+    <button onclick="CalculateNumbers()">Calculate</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function CalculateNumbers() {
+        
+            let txtNumber = document.querySelector('#txtNumber');
+            let num = Number(txtNumber.value);
+            const result = document.querySelector('#result');
+            let total = 0;
+            
+            while(num > 0) {
+            const digit = num % 10;
+            total += digit;
+            num = Math.floor(num / 10);
+            }
+            
+            result.innerText = `Sayıların, rakamlar toplamı : ${total}`;
+        }
+
+    </script>
+</body>
+</html>

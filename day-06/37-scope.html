@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+
+    <script>78
+    let globalScopeVariable = 55;
+    let sameVariable = 7;
+        const test1 = () => {
+            let functionScopeVariable = 33;
+            let sameVariable = 11;
+
+
+            functionScopeVariable++;
+            console.log(functionScopeVariable);
+
+            globalScopeVariable--;
+            console.log(globalScopeVariable);
+            console.log(sameVariable);
+
+            if(sameVariable ==11){
+                let blockScope1 = 21;
+                var nonBlcokScope = 77;
+                console.log(blockScope1);
+            }
+            console.log(nonBlcokScope);
+
+        }
+        test1();
+        // console.log(functionScopeVariable);
+
+        console.log(globalScopeVariable);
+        console.log(--sameVariable);
+    </script>
+</body>
+</html>

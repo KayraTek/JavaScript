@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Practise</title>
 </head>
+
 <body>
     <input type="number" id="txtDiscountRate">
     <button onclick="setPrices()">Update</button>
@@ -15,21 +17,26 @@
         <li>Keyboard <span>25</span>$</li>
         <li>Mouse <span>5</span>$</li>
     </ul>
+    <h3 id="txtNewPrice"></h3>
 
     <script>
-        function setPrices(){
+        function setPrices() {
 
             const txtDiscountRate = document.querySelector('#txtDiscountRate');
-            const productList = document.querySelectorAll('#productList li span');      
-            
+            const productList = document.querySelectorAll('#productList li span');
+            const txtNewPrice = document.querySelector('#txtNewPrice');
             const discountRate = Number(txtDiscountRate.value);
 
-            for(let i= 0; i<productList.length; i++){
-                const price = productList[i].innerText;
-                console.log(productList[i].innerText);
+            for (let i = 0; i < productList.length; i++) {
+                let price = productList[i].innerText; // get price the choosed product
+                price = price - (price * discountRate) / 100; // calculate new price
+                productList[i].innerText = price; // update the price
             }
+
+            txtNewPrice.innerText = `Ürünlere uygulanan indirim oranı : %${discountRate}`;
         }
 
     </script>
 </body>
+
 </html>
