@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately Invoked Function Expression</title>
+</head>
+
+<body>
+
+    <script>
+        const sum = function () {
+            alert("Hello IIFE")
+        }
+        sum();
+
+        (function (){
+            alert("Hello IIFE")
+        }) ()
+
+    </script>
+    <script src="js/script-39-1.js"></script>
+    <script src="js/script-39-2.js"></script>
+</body>
+
+</html>

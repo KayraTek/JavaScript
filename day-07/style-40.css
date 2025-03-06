@@ -1,0 +1,28 @@
+.card{
+    border : 1px solid red;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+.card input{
+    border-radius: 10px;
+    border: none;
+    background-color: aqua;
+    padding: 7px 15px;
+    pointer-events: none;
+
+}
+
+.card button{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(204, 202, 202);
+    padding: 7px 15px;
+}
+
+.card button.btn-guess{
+    background-color: chocolate;
+    color: white;
+    display: none;
+}
