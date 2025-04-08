@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some & Every</title>
+</head>
+<body>
+    
+    
+
+    <script>
+
+        // Some ve Every true false şeklinde bizlere yanıt verir
+        
+        const prices = [50,75,12,33,67,100,150,15];
+
+        if(prices.every( (price) => price>0)){
+            console.log("Bedava ürün yok");
+        }
+
+        if(prices.some( (price) => price>110)){
+            console.log("Pahalı ürün var");
+        }
+
+
+    </script>
+</body>
+</html>

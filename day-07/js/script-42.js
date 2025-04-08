@@ -1,7 +1,20 @@
 
 const txtScore1 = document.querySelector('#btnGetAverage').addEventListener("click", () => {
-    
-})
+    const txtScore1 = document.querySelector('#txtScore1');
+    const txtScore2 = document.querySelector('#txtScore2');
+    const elResult = document.querySelector('#result');
+    if (!isScoreValid(txtScore1.value) || isScoreValid(txtScore2.value)) {
+        alert("Please enter valid scores");
+        }
+
+    let score1 = Number(txtScore1.value);
+    let score2 = Number(txtScore2.value);
+
+    const average = getAverage(score1, score2);
+    const letter = convertToLetter(average);
+
+    elResult.innerHTML = `Your average is: ${average} and your letter is: ${letter}`;
+}); 
 
 
 const getAverage = (num1, num2) => {
@@ -26,10 +39,10 @@ const convertToLetter = (score) => {
 }
 
 
-    const isScoreValid = (score) => {
+const isScoreValid = (score) => {
 
-        return !!score && score >= 0 && score <= 100;
-    }
+    return !!score && score >= 0 && score <= 100;
+}
 
 // console.log(isScoreValid(null));
 // console.log(isScoreValid(null));

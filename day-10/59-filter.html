@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+ 
+    
+    <script>
+        const products = [
+            { id: 1, name: 'laptop', price: 3000},
+            { id: 2, name: 'mobile', price: 1000},
+            { id: 3, name: 'tablet', price: 500},
+            { id: 4, name: 'watch', price: 2000},
+            { id: 5, name: 'headphones', price: 500},
+            { id: 6, name: 'mouse', price: 5},
+            { id: 7, name: 'monitor', price: 350},
+
+
+        ]
+
+        const filterProducts = (letter) => {
+            const filteredProducts = products.filter( (product)=> product.name.startsWith(letter));
+            return filteredProducts;
+        }
+
+        console.log(filterProducts("m"));
+
+    </script>
+</body>
+</html>
