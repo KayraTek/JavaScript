@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            salary: 4500
+        }
+        const newPerson = person
+        newPerson.firstName = "David"
+
+        console.log(person.firstName, newPerson.firstName);
+
+        // Object cloning
+
+        const person2 = { ...person } // Object.assign(person) - shadow copy
+        person2.firstName = "Amy"
+        console.log(person2.firstName);
+
+        const person3 = {...person, birthdate : "1990-01-01", salary:5000} // Object.assign(person, {birthdate: "1990
+        console.log(person3);
+        delete person3.lastName;  // Object icindfen property silme.
+        console.log(person3);
+
+        const px = {person};
+        console.log(px. firstName);
+
+
+    </script>
+</body>
+
+</html>

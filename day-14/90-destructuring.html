@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+
+
+    <script>
+        const person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            salary: 4500,
+            birthdate: "10.10.1984"
+        }
+
+        const message1 = `${person.firstName} ${person.lastName} isimli kisi ${person.birthdate} tarihinde dunyaya gelmistir ve maasi aylik ${person.salary} dir`
+         console.log(message1);
+
+         const {firstName, lastName, salary, birthdate,x} = person;
+     //   console.log(x);
+         const message2 = `${firstName} ${lastName} isimli kisi ${birthdate} tarihinde dunyaya gelmistir ve maasi aylik ${salary} dir`
+         console.log(message2);
+
+    </script>
+</body>
+
+</html>
