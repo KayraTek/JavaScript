@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /*
+        - Google distance service : iki nokta arasi mesafeyi hesapliyor
+        - Car rental service : Arac ve mesafe bilgisini alip fiyatlandirma yapiyor.
+        - Payment Service : Fiyat bilgisini alip odeme islemini gerceklestiriyor.
+        */
+
+
+        const getDistance = (a, b, cb) => {
+            // Alttaki asenktron yapiyi google in distance API ina baglandigini farzedelim
+            setTimeout(() => {
+                const result = (a - b) * Math.floor(Math.random() * 50) + 1;
+                cb(result);
+            }, 3000);
+        }
+
+        const getCarPrice = (car, distance, cb) => {
+            setTimeout(() => {
+                const result = distance * Math.floor(Math.random() * 100) + 1;
+                cb(result)
+            }, 1500);
+        }
+
+        const doPayment = (price,cb) => {
+            setTimeout(() => {
+
+                const result = Math.random() - 0.5;
+                cb(result > 0 ? true : false);
+
+            }, 4000);
+        }
+
+        // getDistance(60,20);
+        // getCarPrice("mercedes",100);
+        // doPayment(2500);
+
+        // Callback chainin amaci birden fazla asenkron yapinin istenilen sirada calistirilmasidir.
+        getDistance(60, 20, (distance) => {
+            // console.log(`Distance : ${distance}`);
+            getCarPrice("mercedes", distance, (payment) => {
+                doPayment(2500, (isSuccess)=>{
+                    console.log(isSuccess ? "Odeme basarili" : "Odeme basarisiz");
+                });
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

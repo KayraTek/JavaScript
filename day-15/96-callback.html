@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const siparisVer = (cb) =>{
+            setTimeout(()=>{
+                cb("hamburger")
+            },5000);
+        }
+
+
+        console.log("sinemaya gittik");
+        console.log("bowling oynadik");
+        console.log("oyun alanina gittik");
+        console.log("karnimiz acikti, siparis verdik.");
+        siparisVer( (food)=>{
+            console.log(`${food} hazir oldu.`);
+        } );
+        console.log("ayakkabi bakmaya gittik");
+        console.log("bos masa aradik.");
+
+
+    </script>
+
+
+</body>
+</html>
